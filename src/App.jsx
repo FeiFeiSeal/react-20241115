@@ -7,7 +7,7 @@ import TabButton from './components/TabButton'
 
 
 function App() {
-  const [tabContent, setTabContent] = useState('components')
+  const [tabContent, setTabContent] = useState()
   const handleClick = (v) => {
     setTabContent(v)
     console.log(tabContent);
@@ -37,6 +37,7 @@ function App() {
           <TabButton onClick={() => handleClick('state')}>State</TabButton>
         </menu>
         <div id="tab-content">
+          {!tabContent? <p>Please select a topic</p> : null }
           <h3>{EXAMPLES[tabContent].title}</h3>
           <p>{EXAMPLES[tabContent].description}</p>
           <pre>
