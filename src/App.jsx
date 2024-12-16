@@ -2,7 +2,7 @@
  * @Author:Wendy
  * @Date:2023-09-14 14:28:26
  * @LastEditors:Wendy
- * @LastEditTime:2024-12-17 00:28:51
+ * @LastEditTime:2024-12-17 00:45:51
  * @Description:
  */
 import { useState } from 'react'
@@ -39,10 +39,10 @@ function App() {
       <section id='examples'>
         <h2>Examples</h2>
         <menu>
-          <TabButton onClick={() => handleClick('components')}>Components</TabButton>
-          <TabButton onClick={() => handleClick('jsx')}>JSX</TabButton>
-          <TabButton onClick={() => handleClick('props')}>Props</TabButton>
-          <TabButton onClick={() => handleClick('state')}>State</TabButton>
+          <TabButton isSelected={tabContent === 'components'} onClick={() => handleClick('components')}>Components</TabButton>
+          <TabButton isSelected={tabContent === 'jsx'} onClick={() => handleClick('jsx')}>JSX</TabButton>
+          <TabButton isSelected={tabContent === 'props'} onClick={() => handleClick('props')}>Props</TabButton>
+          <TabButton isSelected={tabContent === 'state'} onClick={() => handleClick('state')}>State</TabButton>
         </menu>
         <div id="tab-content">
           {!tabContent? <p>Please select a topic</p> : (
