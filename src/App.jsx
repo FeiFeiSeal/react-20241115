@@ -1,10 +1,4 @@
-/*
- * @Author:Wendy
- * @Date:2023-09-14 14:28:26
- * @LastEditors:Wendy
- * @LastEditTime:2024-12-17 00:45:51
- * @Description:
- */
+
 import { useState } from 'react'
 import { CORE_CONCEPTS, EXAMPLES } from './data.js';
 import CoreConcept from './components/CoreConcept'
@@ -21,7 +15,7 @@ function App() {
     
   }
   // console.log('app');
-  console.log(EXAMPLES);
+  console.log(EXAMPLES); 
   
   return (
     <div>
@@ -30,10 +24,9 @@ function App() {
       <section id='core-concepts'>
         <h2>Time to get started!</h2>
         <ul>
-          <CoreConcept {...CORE_CONCEPTS[0]} />
-          <CoreConcept {...CORE_CONCEPTS[1]} />
-          <CoreConcept {...CORE_CONCEPTS[2]} />
-          <CoreConcept {...CORE_CONCEPTS[3]} />
+          { CORE_CONCEPTS.map((item) =>(
+            <CoreConcept key={item.title0} {...item} />
+          )) }
         </ul>
       </section>
       <section id='examples'>
