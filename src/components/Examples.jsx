@@ -1,7 +1,15 @@
+/*
+ * @Author:Pearlie
+ * @Date:2025-01-12 16:11:14
+ * @LastEditors:Pearlie
+ * @LastEditTime:2025-01-12 16:52:43
+ * @Description:
+ */
 
 import { useState } from 'react'
-import { EXAMPLES } from '../data.js';
+import { EXAMPLES } from '../data.js'
 import TabButton from './TabButton.jsx'
+import Section from './Section.jsx'
 
 export default function Examples () {
   const [tabContent, setTabContent] = useState()
@@ -9,8 +17,7 @@ export default function Examples () {
     setTabContent(v)
   }
   return (
-    <section id='examples'>
-      <h2>Examples</h2>
+    <Section title='examples' id="examples" >
       <menu>
         <TabButton isSelected={tabContent === 'components'} onClick={() => handleClick('components')}>Components</TabButton>
         <TabButton isSelected={tabContent === 'jsx'} onClick={() => handleClick('jsx')}>JSX</TabButton>
@@ -24,6 +31,6 @@ export default function Examples () {
             </pre></>
       )}
       </div>
-    </section>
+    </Section>
   )
 }
