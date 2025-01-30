@@ -2,7 +2,7 @@
  * @Author:Pearlie
  * @Date:2025-01-12 16:11:14
  * @LastEditors:Pearlie
- * @LastEditTime:2025-01-30 14:04:36
+ * @LastEditTime:2025-01-30 15:03:41
  * @Description:
  */
 
@@ -21,7 +21,6 @@ export default function Examples () {
   return (
     <Section title='examples' id="examples" >
       <Tabs
-        buttonsContainer="menu"
         buttons={
           <>
             <TabButton isSelected={tabContent === 'components'} onClick={() => handleClick('components')}>Components</TabButton>
